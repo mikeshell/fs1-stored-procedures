@@ -229,6 +229,11 @@ SELECT * FROM openquery(KRACK, '
 	set shipmethod = 'Shipping: Free Shipping on Select Items'
 	where shipmethod = 'Shipping: Free Shipping'
 	
+	/* Coupon Fix */
+	update order_options
+	set option_id = 490
+	where attr_code = 'COUPON'
+
 /* Comments */
 DECLARE comCursor CURSOR FOR 
 
