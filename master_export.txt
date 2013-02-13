@@ -1,6 +1,6 @@
 USE [KatomDev]
 GO
-/****** Object:  StoredProcedure [dbo].[InvUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[InvUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -26,7 +26,7 @@ exec master..xp_cmdshell @cmd
  
  END
 GO
-/****** Object:  StoredProcedure [dbo].[NAVSalesOrderUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[NAVSalesOrderUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ BEGIN
 	ORDER BY [Shipment Date] DESC
 END
 GO
-/****** Object:  StoredProcedure [dbo].[NAVCustomerProfileUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[NAVCustomerProfileUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +159,7 @@ BEGIN
 	WHERE DATEDIFF(DAY, [Last Date Modified], GETDATE()) =0
 END
 GO
-/****** Object:  StoredProcedure [dbo].[downloadMIVAtables]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[downloadMIVAtables]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -206,7 +206,7 @@ SELECT * INTO mivaAttributesTemplateAttrs FROM OPENQUERY(MYSQL, 'select * from k
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InsertGenerator]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[InsertGenerator]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -287,7 +287,7 @@ exec sp_executesql @query
 CLOSE cursCol
 DEALLOCATE cursCol
 GO
-/****** Object:  StoredProcedure [dbo].[errorRPT_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[errorRPT_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -394,7 +394,7 @@ BEGIN
 	EXEC(@query)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[shippingBill_Rpt]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[shippingBill_Rpt]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -502,7 +502,7 @@ BEGIN
 	exec(@sql)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_SQLNotify]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[sp_SQLNotify]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -576,7 +576,7 @@ http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cdosys/html/_cd
    
    PRINT 'Mail Sent!'
 GO
-/****** Object:  StoredProcedure [dbo].[sp_Mail]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[sp_Mail]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -594,7 +594,7 @@ Create Procedure [dbo].[sp_Mail]
 	
 	SET nocount on
 GO
-/****** Object:  StoredProcedure [dbo].[webtolocaldatasynch]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[webtolocaldatasynch]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -639,7 +639,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[NAVInvoiceUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[NAVInvoiceUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -706,7 +706,7 @@ BEGIN
 	DROP TABLE #tmp
 END
 GO
-/****** Object:  StoredProcedure [dbo].[NAVCreditMemoUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[NAVCreditMemoUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -759,7 +759,7 @@ BEGIN
 	DROP TABLE #tmp
 END
 GO
-/****** Object:  StoredProcedure [dbo].[trackingImport_VOLLRATH]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[trackingImport_VOLLRATH]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -827,7 +827,7 @@ BEGIN
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[tracking_Export]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[tracking_Export]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -859,7 +859,7 @@ FROM trackinginfo
 WHERE NAVimported = 0 AND LEN(ISNULL(katomOrderID, '')) > 0
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SuperSaverUpdate_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[SuperSaverUpdate_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -918,7 +918,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[trackingNum_w_no_ref]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[trackingNum_w_no_ref]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -984,7 +984,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportBBold]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportBBold]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1205,7 +1205,7 @@ where ccname = 'Pilot'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportBB]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportBB]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1425,7 +1425,7 @@ where ccname = 'Pilot'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[stockCloseout_BK_12162011]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[stockCloseout_BK_12162011]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1475,7 +1475,7 @@ BEGIN
 	exec dbo.email_StockCloseout
 END
 GO
-/****** Object:  StoredProcedure [dbo].[upsBill_processFile]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[upsBill_processFile]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1518,7 +1518,7 @@ BEGIN
 	TRUNCATE TABLE upsBillFile
 END
 GO
-/****** Object:  StoredProcedure [dbo].[trackingRPT_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[trackingRPT_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1631,7 +1631,7 @@ update trackingRpt set vendor = 'UNKNOWN' WHERE LEN(VENDORID) = 0
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[shippingBill_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[shippingBill_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1674,7 +1674,7 @@ BEGIN
 	ORDER BY 5 DESC
 END
 GO
-/****** Object:  StoredProcedure [dbo].[webtrackinginfo]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[webtrackinginfo]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1754,7 +1754,7 @@ and lastUpdateDT > (select * from openquery(MYSQL,'select date_add(max(lastupdat
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[updateSalesRank]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[updateSalesRank]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1809,7 +1809,7 @@ TRUNCATE TABLE prodTemp
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[updateCatInfo_incremental]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[updateCatInfo_incremental]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1877,7 +1877,7 @@ DEALLOCATE pCursor
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[updateCatInfo]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[updateCatInfo]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1965,7 +1965,7 @@ DEALLOCATE pCursor
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[validateOrderImport]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[validateOrderImport]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2077,7 +2077,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SLIFeed_SP2]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[SLIFeed_SP2]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2325,7 +2325,7 @@ BEGIN
 	UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SLIFeed_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[SLIFeed_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2572,7 +2572,7 @@ BEGIN
 	UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[shareASaleFeed_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[shareASaleFeed_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2684,7 +2684,7 @@ DELETE FROM feed_shareAsale WHERE sku LIKE '%599-%'
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesStat30DaysPopulationWarehouse_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesStat30DaysPopulationWarehouse_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2849,7 +2849,7 @@ TRUNCATE TABLE SalesStatWorktable
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesStat30DaysPopulation_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesStat30DaysPopulation_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3138,7 +3138,7 @@ WHERE p.[Product Name] = 'Over 10 days'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMediumMM_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMediumMM_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3272,7 +3272,7 @@ BEGIN
 	DEALLOCATE catCursor		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMediumMM_RPT]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMediumMM_RPT]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3311,7 +3311,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMediumMM_cat_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMediumMM_cat_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3408,7 +3408,7 @@ BEGIN
 	DEALLOCATE catCursor		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMedium_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMedium_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3751,7 +3751,7 @@ BEGIN
 	DEALLOCATE catCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMedium_RPT]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMedium_RPT]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3822,7 +3822,7 @@ BEGIN
 	EXEC(@sql)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMedium_email]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMedium_email]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3961,7 +3961,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByCat2]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByCat2]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4029,7 +4029,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByCat_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByCat_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4144,7 +4144,7 @@ BEGIN
 	   END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[returns_synch_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[returns_synch_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4186,7 +4186,7 @@ END
 
 select * from [web_return_requests]
 GO
-/****** Object:  StoredProcedure [dbo].[prod_Suggestion_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[prod_Suggestion_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4273,7 +4273,7 @@ BEGIN
 	WHERE prodSuggestionDT IS NULL AND CODE NOT IN (SELECT DISTINCT CODE FROM prod_suggestion)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportTest]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportTest]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4472,7 +4472,7 @@ exec CvcImport
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportKatomRack]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportKatomRack]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4897,7 +4897,7 @@ where shipmethod = 'UPS Worldwide Expedited'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportKatomDEV]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportKatomDEV]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5201,7 +5201,7 @@ where order_id in (select order_id from order_hdr where customerpo = 'PI'+RIGHT(
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportFAB]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportFAB]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5514,7 +5514,7 @@ where order_id = 'FA21730290'
 
 */
 GO
-/****** Object:  StoredProcedure [dbo].[products_equivalent_sp]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[products_equivalent_sp]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5574,7 +5574,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_leadTime_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_leadTime_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5828,7 +5828,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_featured_HP_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_featured_HP_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5875,7 +5875,7 @@ BEGIN
 	   END	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByProducts_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByProducts_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5996,7 +5996,7 @@ BEGIN
 	WHERE ps.sales > 0
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMFG_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMFG_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6139,7 +6139,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[salesByMFG_RPT]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[salesByMFG_RPT]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6192,7 +6192,7 @@ BEGIN
 	EXEC(@sql)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[Email_trackingNotImportedToNAV]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[Email_trackingNotImportedToNAV]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6282,7 +6282,7 @@ BEGIN
 	   END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[DUP_trakingNumberCleanup]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[DUP_trakingNumberCleanup]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6329,7 +6329,7 @@ DEALLOCATE lagCursor
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[FrostyTrackingMailer]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[FrostyTrackingMailer]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6661,7 +6661,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[fedExTracking_SP2]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[fedExTracking_SP2]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6696,7 +6696,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[fedExTracking_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[fedExTracking_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6980,7 +6980,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[feedGooglebase_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[feedGooglebase_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7152,7 +7152,7 @@ ELSE
 	END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[hourly_open_order_status_old]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[hourly_open_order_status_old]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7434,7 +7434,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[hourly_open_order_status]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[hourly_open_order_status]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7632,7 +7632,7 @@ BEGIN
 	EXEC msdb.dbo.sp_send_dbmail @profile_name='katom', @recipients=@email1,	@subject=@subject1,	@body=@body1, @body_format ='HTML',	@blind_copy_recipients='katom.archive@gmail.com'	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[dailyStat_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[dailyStat_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7982,7 +7982,7 @@ BEGIN
 	TRUNCATE TABLE mfgWorktable
 END
 GO
-/****** Object:  StoredProcedure [dbo].[dailyStat_Email]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[dailyStat_Email]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8515,7 +8515,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CvcImporttest]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[CvcImporttest]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8571,7 +8571,7 @@ where cvc = '1'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CvcImport]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[CvcImport]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8627,7 +8627,7 @@ where cvc = '1'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[cseClick_Stat]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[cseClick_Stat]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8678,7 +8678,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[FA_HouseItems_Process]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[FA_HouseItems_Process]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8745,7 +8745,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[FA_HouseItems]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[FA_HouseItems]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8775,7 +8775,7 @@ BEGIN
 	ORDER BY t.code	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[Email_prodError]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[Email_prodError]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8967,7 +8967,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[Email_ProccessedOrderFromWarehouse_charley]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[Email_ProccessedOrderFromWarehouse_charley]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9071,7 +9071,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[Email_ActiveProductsOrNot]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[Email_ActiveProductsOrNot]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9238,7 +9238,7 @@ EXEC msdb.dbo.sp_send_dbmail @profile_name='katom', @recipients=@email1,	@subjec
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ebayOrderImport]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ebayOrderImport]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9333,7 +9333,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[MFG_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[MFG_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9397,7 +9397,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[keywordImport]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[keywordImport]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9474,7 +9474,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InvoiceEmailer_OldNav]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[InvoiceEmailer_OldNav]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9919,7 +9919,7 @@ delete from shipxref where id = 15628
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InvoiceEmailer]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[InvoiceEmailer]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10339,7 +10339,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[order_cache_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[order_cache_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10496,7 +10496,7 @@ AS
 	WHERE c.salesPerson IS NULL
 END
 GO
-/****** Object:  StoredProcedure [dbo].[openPORpt_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[openPORpt_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10580,7 +10580,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[openOrderRPT_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[openOrderRPT_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10683,7 +10683,7 @@ BEGIN
 	EXEC(@query)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[openOrderRpt]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[openOrderRpt]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10848,7 +10848,7 @@ BEGIN
 	DEALLOCATE catCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[openOrder_Email]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[openOrder_Email]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11108,7 +11108,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[negativeInventory_Email]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[negativeInventory_Email]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11196,7 +11196,7 @@ BEGIN
 	   END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PilotInvoicing_SP_OldNav]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[PilotInvoicing_SP_OldNav]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11250,7 +11250,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PilotInvoicing_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[PilotInvoicing_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11370,7 +11370,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PaymentParseTest]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[PaymentParseTest]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11539,7 +11539,7 @@ SET @StringToParse = (select pay_secdat from openquery (MYSQL, 'select pay_secda
 PRINT SUBSTRING(@StringToParse, CHARINDEX(@Delimiter,@StringToParse,1)+1, (CHARINDEX(@Delimiter2,@StringToParse,1)- 1)-(CHARINDEX(@Delimiter,@StringToParse,1)))
  */
 GO
-/****** Object:  StoredProcedure [dbo].[PaymentParse]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[PaymentParse]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11706,7 +11706,7 @@ SET @StringToParse = (select pay_secdat from openquery (MYSQL, 'select pay_secda
 PRINT SUBSTRING(@StringToParse, CHARINDEX(@Delimiter,@StringToParse,1)+1, (CHARINDEX(@Delimiter2,@StringToParse,1)- 1)-(CHARINDEX(@Delimiter,@StringToParse,1)))
  */
 GO
-/****** Object:  StoredProcedure [dbo].[OrderTotalUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[OrderTotalUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11790,7 +11790,7 @@ UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[OrderStatusUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[OrderStatusUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11830,7 +11830,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PowerReviewsFollowup_SP_OldNav]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[PowerReviewsFollowup_SP_OldNav]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11866,7 +11866,7 @@ Select * FROM powerreviewsfollowup
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PowerReviewsFollowup_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[PowerReviewsFollowup_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11905,7 +11905,7 @@ ORDER BY i.No_
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[feedHistory_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[feedHistory_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11929,7 +11929,7 @@ BEGIN
 	INSERT INTO feedHistory(cseName, numProd, feedDT)  VALUES(@cse, @prodCount, GETDATE())
 END
 GO
-/****** Object:  StoredProcedure [dbo].[prodCatAssignment]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[prodCatAssignment]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11989,7 +11989,7 @@ BEGIN
 	DEALLOCATE catCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[productActiveStat]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[productActiveStat]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12096,7 +12096,7 @@ BEGIN
 	TRUNCATE TABLE productStat_worktable
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_relatedItems_Cleanup_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_relatedItems_Cleanup_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12162,7 +12162,7 @@ BEGIN
 	DEALLOCATE catCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_Pricing_Update_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_Pricing_Update_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12445,7 +12445,7 @@ WHERE [Sales Type] = 1
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_categorization_holiday_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_categorization_holiday_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12494,7 +12494,7 @@ BEGIN
 	DEALLOCATE cCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_categorization_FULL_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_categorization_FULL_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12541,7 +12541,7 @@ BEGIN
 	DEALLOCATE cCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_categorization_clearance_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_categorization_clearance_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12590,7 +12590,7 @@ BEGIN
 	DEALLOCATE cCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[processOpenOrder]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[processOpenOrder]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12791,7 +12791,7 @@ ELSE IF @action = 5 --PROCESS OPEN PO SS
    END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[cat_and_mfg_weekly_stat]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[cat_and_mfg_weekly_stat]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12941,7 +12941,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[addNewCategory]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[addNewCategory]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13052,7 +13052,7 @@ BEGIN
 	WHERE c.mfgID IS NULL
 END
 GO
-/****** Object:  StoredProcedure [dbo].[addComment]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[addComment]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13091,7 +13091,7 @@ BEGIN
 	 SELECT notes FROM comment WHERE prodNum=@code AND documentNum = @poNum AND documentType=@docType
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_SuperCat]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_SuperCat]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13125,7 +13125,7 @@ BEGIN
 	   
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_topMfg_SP]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_topMfg_SP]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13175,7 +13175,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_categorized_uncat_vendor_products]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_categorized_uncat_vendor_products]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13225,7 +13225,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_catxprod_sales]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_catxprod_sales]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13305,7 +13305,7 @@ BEGIN
 	WHERE cx.catID IS NULL	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_catxprod_cleanUp]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_catxprod_cleanUp]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13368,7 +13368,7 @@ BEGIN
 	TRUNCATE TABLE productTMP
 END
 GO
-/****** Object:  StoredProcedure [dbo].[backorderItem_Email]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[backorderItem_Email]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13464,7 +13464,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_reAssignProdCat_FA]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_reAssignProdCat_FA]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13514,7 +13514,7 @@ BEGIN
 	DEALLOCATE catCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_numProd_FA_BK]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_numProd_FA_BK]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13576,7 +13576,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_numProd_FA]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_numProd_FA]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13638,7 +13638,7 @@ BEGIN
 	DELETE FROM CATEGORIES_FA WHERE numProd = 0
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_numProd]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_numProd]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13694,7 +13694,7 @@ BEGIN
 	   END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[catPerformanceWeekly_EMAIL]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[catPerformanceWeekly_EMAIL]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13977,7 +13977,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[catPerformanceWeekly]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[catPerformanceWeekly]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14332,7 +14332,7 @@ BEGIN
 	FROM catPerformance_RPT c JOIN prodTemp p ON c.catName = p.[Product Name]
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categoryVirtual_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[categoryVirtual_SP]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14371,7 +14371,7 @@ BEGIN
 	FROM categoryVirtualWorktable v JOIN categories2 c on v.subcat_id = c.ID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categoryDuplicateCleanup_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[categoryDuplicateCleanup_SP]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14442,7 +14442,7 @@ BEGIN
 	DEALLOCATE cCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_holiday]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_holiday]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14486,7 +14486,7 @@ BEGIN
 		and qtyonhand > 0	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_featuredProducts]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_featuredProducts]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14579,7 +14579,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CopyEbayOrderToTest]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[CopyEbayOrderToTest]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14766,7 +14766,7 @@ where order_id = @ORDERID
       
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ConfirmationEmailerbkp12-4-11]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ConfirmationEmailerbkp12-4-11]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15083,7 +15083,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ConfirmationEmailer_OldNav]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ConfirmationEmailer_OldNav]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15520,7 +15520,7 @@ delete from shipxref where id = 15628
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ConfirmationEmailer]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ConfirmationEmailer]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15834,7 +15834,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[clearanceUpdate]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[clearanceUpdate]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15860,7 +15860,7 @@ SELECT [CODE]
   FROM [KatomDev].[dbo].[products] WHERE clearance = '1';
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CJProdFeed]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[CJProdFeed]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16012,7 +16012,7 @@ AS
 		SELECT * FROM cjFeed
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[category_catxprod_supplement_email]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_catxprod_supplement_email]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16105,7 +16105,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[check_ups_autoload_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[check_ups_autoload_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16133,7 +16133,7 @@ BEGIN
 	IF @records = 0 BEGIN EXEC msdb.dbo.sp_send_dbmail @profile_name='katom', @recipients='itsupport@katom.com',	@subject='UPS File Import Count',	@body=@body1, @body_format ='HTML',	@blind_copy_recipients='katom.archive@gmail.com' PRINT 'Email Sent' END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[check_pricing_variance]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[check_pricing_variance]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16259,7 +16259,7 @@ BEGIN
 	   END	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[channelAdvisorFeed_SP2]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[channelAdvisorFeed_SP2]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16579,7 +16579,7 @@ BEGIN
 	UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[channelAdvisorFeed_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[channelAdvisorFeed_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16914,7 +16914,7 @@ BEGIN
 	UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_catxprod_supplement]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_catxprod_supplement]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16987,7 +16987,7 @@ BEGIN
 	TRUNCATE TABLE catxprodTemp
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_catxprod_vendor]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_catxprod_vendor]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17061,7 +17061,7 @@ BEGIN
 		AND cp.catID IS NULL
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_FA_SP]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_FA_SP]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17283,7 +17283,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[processNewNAVProd_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[processNewNAVProd_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17392,7 +17392,7 @@ CLOSE lagCursor
 DEALLOCATE lagCursor
 END
 GO
-/****** Object:  StoredProcedure [dbo].[priceDiscrepancyRpt]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[priceDiscrepancyRpt]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17547,7 +17547,7 @@ BEGIN
 	   END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[PilotOrderImportTest]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[PilotOrderImportTest]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17758,7 +17758,7 @@ UPDATE [KatomDev].[dbo].[order_hdrtest] SET ccnum = dbo.StripNonNumeric(ccnum)
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InvoiceBackupCopy_OldNav]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[InvoiceBackupCopy_OldNav]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18017,7 +18017,7 @@ select [No_]
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InvoiceBackupCopy]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[InvoiceBackupCopy]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18311,7 +18311,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ebayListing]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ebayListing]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18553,7 +18553,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[googleFeed_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[googleFeed_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18814,7 +18814,7 @@ delete from googleBaseFeed where id = 'TRUE-Refrigeration-T-49'
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[feedAmazon_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[feedAmazon_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18907,7 +18907,7 @@ BEGIN
 							)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[productActiveStat_rpt]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[productActiveStat_rpt]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18930,7 +18930,7 @@ BEGIN
 	ORDER BY mfgid
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportTestINTL]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportTestINTL]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19121,7 +19121,7 @@ exec CvcImport
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[product_categorization_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[product_categorization_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19214,7 +19214,7 @@ BEGIN
 	   EXEC dbo.[product_categorization_holiday_SP]
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImportBKP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImportBKP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19405,7 +19405,7 @@ exec CvcImport
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sitemap_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[sitemap_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19721,7 +19721,7 @@ DELETE FROM sitemap2 WHERE content LIKE '%599-%'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ups_tracking]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ups_tracking]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20078,7 +20078,7 @@ BEGIN
 	where isnumeric(KatomOrderID) = 0 and charindex('-', KatomOrderID) = 0
 END
 GO
-/****** Object:  StoredProcedure [dbo].[stockCloseout]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[stockCloseout]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20176,7 +20176,7 @@ BEGIN
 	EXEC dbo.[product_categorization_clearance_SP]
 END
 GO
-/****** Object:  StoredProcedure [dbo].[RemoteOrderImport]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[RemoteOrderImport]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20393,7 +20393,7 @@ where ccname = 'Pilot'
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[trackingInfo_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[trackingInfo_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20641,7 +20641,7 @@ BEGIN
 	UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ShipTrackingEmailerTest]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ShipTrackingEmailerTest]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20944,7 +20944,7 @@ delete from shipxref where id = 15628
 */
 END
 GO
-/****** Object:  StoredProcedure [dbo].[ShipTrackingEmailer]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[ShipTrackingEmailer]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21206,7 +21206,7 @@ delete from shipxref where id = 15628
 */
 END
 GO
-/****** Object:  StoredProcedure [dbo].[productsSynchNAVtoProducts11082012]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[productsSynchNAVtoProducts11082012]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21592,7 +21592,7 @@ WHERE CODE = '141-MMB142' and qtyOnHand < 2
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[productsSynchNAVtoProducts_FULL]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[productsSynchNAVtoProducts_FULL]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21922,7 +21922,7 @@ WHERE CODE = '141-MMB142' and qtyOnHand < 2
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[productsSynchNAVtoProducts]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[productsSynchNAVtoProducts]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22273,7 +22273,7 @@ DELETE FROM products WHERE LEFT(code, 3) = '599'
 UPDATE jobHistory SET endDT = GETDATE() WHERE jobID = @jobID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[products_FA_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[products_FA_SP]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22306,7 +22306,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[FedexTrackingEmailerTEST]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[FedexTrackingEmailerTEST]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22649,7 +22649,7 @@ exec invoicebackupcopy
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[FedexTrackingEmailerBkp]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[FedexTrackingEmailerBkp]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22934,7 +22934,7 @@ delete from shipxref where id = 15628
 */
 END
 GO
-/****** Object:  StoredProcedure [dbo].[FedexTrackingEmailer]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[FedexTrackingEmailer]    Script Date: 02/13/2013 14:41:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -23281,7 +23281,7 @@ exec invoicebackupcopy
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[category_catxprod]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[category_catxprod]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -23424,7 +23424,7 @@ BEGIN
 	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories2_SP]    Script Date: 02/13/2013 14:31:58 ******/
+/****** Object:  StoredProcedure [dbo].[categories2_SP]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -23803,7 +23803,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[categories_SP]    Script Date: 02/13/2013 14:31:57 ******/
+/****** Object:  StoredProcedure [dbo].[categories_SP]    Script Date: 02/13/2013 14:41:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
